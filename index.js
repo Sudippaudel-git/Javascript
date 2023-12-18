@@ -1,11 +1,15 @@
+
+Complete Javascript Concepts... 
+  1) Single Line Comment.
 // console.log( "I like pizza");
 // console.log("It really good");
 // window.alert("I really love pizza");
-// // this is commment
-// /*
-// This is multi line comment
+  2) MultiLine Comment.
+
 // */ 
 // /*
+
+  3. Variable
 // a variable is a container for storing data
 // a variable behaves as if it was the value that contains
 // > two steps :
@@ -15,12 +19,39 @@
 // let age=21; //number
 // age=age+1;
 // console.log( "you are ",age," years old");
-// let firstname="Brother";  //String
+// let firstname="Sudeep";  //String
 // console.log("hello",firstname);
-// // Boolean is one of two values true or false
-// let student=false;
-// console.log( "Enrolled",student);
-// age=age+1;
+
+3.1   Scope of variable 
+// // Variable scope=where a variable is accessible 
+// let=variable are limited to block scope{};
+// var=variables are limited to function();
+// for(let i=1;i<=3;i++){
+//    console.log(i);
+// }
+// // console.log(i);// Because let is limited within a block section:
+// // for(var i=5;i<102;i++){
+// //    console.log("You re a better than yesterday!");
+// }
+// console.log(i);
+doSomething();
+function doSomething(){
+   for(var i=0;i<102;i++){
+      console.log("You re a better than yesterday!");
+   }
+ 
+} 
+// // console.log(i);
+// global variable= is declared outside any function
+// // (if global, var will change browser's window properties)
+var name="sudip";/// display in  browser's properties
+// let name="sudip"; doesn't display in browsers
+
+
+
+
+
+4. Operator
 // // Operator
 // // arithematic operator is a combination of ... operands (values, variable etc.)
 // //operator (+ - / * %)
@@ -30,6 +61,9 @@
 // students=students%3;
 //  console.log(students);
 // /*
+
+  4.1 Precedence of Operator
+    
 // operator precedence
 // 1. parenthesis()
 // 2.exponents
@@ -37,12 +71,42 @@
 
 // 4. addition and subtraction 
 // */
+
+    Example 4.1.1
+      
 // let result=1+2*(3+4);
 // console.log(result);
 // let print=(1*8)+3-4+(5*1);
 // console.log(print);
 // // document.getElementById("p1").innerHTML="Hello"+firstname;
-// // how to accept user input 
+Operator Concepts
+// Ternary Operator = shortcut for if else statement:
+/*
+1. A condition with?
+2.expression if true:
+3. expression if false:
+condition? expIftrue:expIffalse;
+*/
+let adult=checkAge(21);
+console.log(adult);
+function checkAge(age){
+   // if(age>=45){
+   //    return true;
+   // }
+   // else{
+   //    return false;
+   // }
+   // or simply
+   return age>=18? true:false;
+}
+checkWinner(true);
+function checkWinner(win){
+   win? console.log("You win!!"):console.log("you lose");
+}
+
+      
+5)  how to accept user input 
+  
 // // easy way with windows prompt ,- difficult way HTML textbox.
   
 //  let username=window.prompt("What's your name?");
@@ -56,7 +120,9 @@
  }
  */
 /*
-Type conversion=change the datatype of ta value to another (string,number,boolean)
+
+
+6. ) ---- Type conversion=change the datatype of ta value to another (string,number,boolean)
 */
 /*let age=window.prompt("how old are you");
 age=Number(age);
@@ -96,13 +162,18 @@ console.log(z, typeof z);
 //     Math.pow(a,2)+Math.pow(b,2));
 //     document.getElementById("cLabel").innerHTML="Side C:" +c;
 //      }
+
+7... Looping
+//  1.for loop::::
 for(let i=0;i<=20;i++){
    if(i==12){
       break;
    }
    console.log(i);
 }
-// Nested loops=Loop inside  another loops
+
+
+// 8......       Nested loops=Loop inside  another loops
 // for( let i=0;i<5;i++){
 //    for( let j=1;j<5;j++){
 //       console.log();
@@ -122,6 +193,10 @@ for(let i=1;i<=rows;i+=1){
    document.getElementById("myRectangle").innerHTML +="<br>"
 }
 */
+
+
+ ............ Function Concepts   
+
 // Function => Define a code once and use it many times:
 // console.log("Happy sudip");
 // console.log("Ram");
@@ -164,55 +239,12 @@ console.log("Vamos Argentina ",userName,age);
 //    console.log("The result is area",result);
 //    return result;
 // }
-// Ternary Operator = shortcut for if else statement:
-/*
-1. A condition with?
-2.expression if true:
-3. expression if false:
-condition? expIftrue:expIffalse;
-*/
-let adult=checkAge(21);
-console.log(adult);
-function checkAge(age){
-   // if(age>=45){
-   //    return true;
-   // }
-   // else{
-   //    return false;
-   // }
-   // or simply
-   return age>=18? true:false;
-}
-checkWinner(true);
-function checkWinner(win){
-   win? console.log("You win!!"):console.log("you lose");
-}
 
 
 
-// // Variable scope=where a variable is accessible 
-// let=variable are limited to block scope{};
-// var=variables are limited to function();
-// for(let i=1;i<=3;i++){
-//    console.log(i);
-// }
-// // console.log(i);// Because let is limited within a block section:
-// // for(var i=5;i<102;i++){
-// //    console.log("You re a better than yesterday!");
-// }
-// console.log(i);
-doSomething();
-function doSomething(){
-   for(var i=0;i<102;i++){
-      console.log("You re a better than yesterday!");
-   }
- 
-} 
-// // console.log(i);
-// global variable= is declared outside any function
-// // (if global, var will change browser's window properties)
-var name="sudip";/// display in  browser's properties
-// let name="sudip"; doesn't display in browsers
+
+
+  ****  Template Literal Concepts:::
 
 //Template literals= `${}` we can use instead of literals
 
@@ -233,6 +265,9 @@ var name="sudip";/// display in  browser's properties
 //  Regards 
 //  Sudip`;
 
+
+  
+Practice it....
 //  // format currency
 //  let myNum=123645666;
 //  //  /*"hi-IN"*/  hindi number format
@@ -244,7 +279,7 @@ var name="sudip";/// display in  browser's properties
 // //  console.log(myNum);
 // myNum=myNum.toLocaleString(undefined,{style: "unit",unit:"Celcius"});
 
-
+ 10............Math Functions 
 const answer= Math.floor(Math.random()*10+1);
 let guesses=0;
 document.getElementById("submit").onclick=function(){
